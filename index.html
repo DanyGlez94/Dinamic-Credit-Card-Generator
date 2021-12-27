@@ -61,6 +61,41 @@
 		<!-- /Button Block -->
 
 		<!-- Form Block -->
+		<form action="" class="cardForm" id="cardForm">
+			<div class="cardForm__group">
+				<label for="inputNumber">Número Tarjeta</label>
+				<input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+			</div>
+			<div class="cardForm__group">
+				<label for="inputName">Nombre</label>
+				<input type="text" id="inputName" maxlength="19" autocomplete="off">
+			</div>
+			<div class="cardForm__flex">
+				<div class="cardForm__group expiration">
+					<label for="monthSelect">Expiración</label>
+					<div class="cardForm__flex">
+						<div class="cardForm__select">
+							<select name="month" id="monthSelect">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="cardForm__select">
+							<select name="year" id="yearSelect">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="cardForm__group cvv">
+					<label for="inputCVV">CVV</label>
+					<input type="text" id="inputCVV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn__submit">Enviar</button>
+		</form>
+
 		<!-- /Form Block -->
 	</main>
 
