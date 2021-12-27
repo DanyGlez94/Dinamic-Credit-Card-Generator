@@ -9,7 +9,32 @@
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-	
+	<main class="container">
+		<!-- Block -->
+		<section class="card" id="card">
+			<div class="card__frontSide">
+				<div class="card__logoBrand">
+					<img src="img/logos/visa.png" alt="Logo Visa">
+				</div>
+				<img src="img/chip-tarjeta.png" class="card__chip" alt="">
+				<div class="card__group" id="card__group--number">
+					<p class="card__label">Número Tarjeta</p>
+					<p class="card__number">#### #### #### ####</p>
+				</div>
+				<div class="card__flexbox">
+					<div class="card__group" id="card__group--name">
+						<p class="card__label">Nombre Tarjeta</p>
+						<p class="card__name">John Doe</p>
+					</div>
+					<div class="card__group" id="card__group--expiration">
+						<p class="card__label">Expiración</p>
+						<p class="card__expiration"><span class="card__expiration-month">MM</span> / <span class="card__expiration-year">AA</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Block -->
+	</main>
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
