@@ -168,3 +168,92 @@ body {
 .btn__openForm.active {
 	transform: rotate(45deg);
 }
+
+/* ------------------- Formulario ------------------- */
+
+.cardForm {
+	background-color: white;
+	width: 100%;
+	padding: 150px 30px 30px 30px;
+	max-width: 700px;
+	border-radius: 10px;
+	position: relative;
+	top: -150px;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: clip-path .3s ease-out;
+}
+.cardForm.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.cardForm__group label {
+	display: block;
+	width: 100%;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+.cardForm__group input,
+.cardForm__group select,
+.btn__submit {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+.cardForm__group input:hover,
+.cardForm__group select:hover {
+	border: 2px solid #93BFED;
+}
+.cardForm__group input:focus,
+.cardForm__group select:focus {
+	outline: rgb(4, 4, 4);
+	box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+}
+.cardForm__group input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.cardForm__flex {
+	display: flex;
+	justify-content: space-between;
+}
+.cardForm .expiration {
+	width: 100%;
+}
+.cardForm .cvv {
+	min-width: 100px;
+}
+.cardForm__select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+.cardForm__select select {
+	-webkit-appearance: none;
+}
+.cardForm__select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+.cardForm__select:hover i {
+	color: #93BFED;
+}
+.btn__submit {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: white;
+	background-color: #2364D2;
+	box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+	cursor: pointer;
+}
+.btn__submit:hover {
+	background-color: #1850B1;
+}
