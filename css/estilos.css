@@ -5,13 +5,14 @@
 }
 
 body {
-	background: #ddeefc;
+	background: linear-gradient(to right, #de6161, #2657eb);
 	font-family: 'Lato', sans-serif;
 }
 .container {
 	width: 90%;
+	height: 100vh;
 	max-width: 1000px;
-	padding: 40px 20px;
+	padding: 20px 20px 40px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -174,7 +175,7 @@ body {
 .cardForm {
 	background-color: white;
 	width: 100%;
-	padding: 150px 30px 30px 30px;
+	padding: 135px 30px 30px 30px;
 	max-width: 700px;
 	border-radius: 10px;
 	position: relative;

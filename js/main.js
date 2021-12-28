@@ -4,7 +4,10 @@ const card = document.querySelector('#card'),
       cardNumber = document.querySelector('#card .card__number'),
       cardName = document.querySelector('#card .card__name'),
       logoBrand = document.querySelector('#logoBrand'),
-      signature = document.querySelector('#signature .card__signature p');
+      signature = document.querySelector('#signature .card__signature p'),
+      expirationMonth = document.querySelector('#card .card__expiration-month'),
+      expirationYear = document.querySelector('#card .card__expiration-year'),
+      cvv = document.querySelector('#cvv .card__cvv');
 
 //Volteamos la tarjeta para mostrar el frente.
 const showFrontside = () => {
@@ -12,6 +15,12 @@ const showFrontside = () => {
         card.classList.remove('active');
     }
 }
+
+//Volteamos la tarjeta para mostrar el backside.
+const showBackside = () => {
+    card.classList.add('active');
+}
+
 
 //Rotación de la tarjeta
 card.addEventListener('click', () => {
@@ -89,4 +98,27 @@ cardForm.inputName.addEventListener('keyup', (e) => {
     }
 
     showFrontside();
+});
+
+//Select boxes de expiración y CVV
+cardForm.monthSelect.addEventListener('change', (e) => {
+    expirationMonth.textContent = e.target.value;
+    showFrontside();
+});
+
+cardForm.yearSelect.addEventListener('change', (e) => {
+    expirationYear.textContent = e.target.value.slice(2);
+    showFrontside();
+});
+
+cardForm.inputCVV.addEventListener('keyup', (e) => {
+    let inputValue = e.target.value;
+
+    cardForm.inputCVV.value = inputValue
+    .replace(/\s/g, '')
+    .replace(/\D/g, '');
+
+    cvv.textContent = inputValue;
+
+    showBackside();
 });
